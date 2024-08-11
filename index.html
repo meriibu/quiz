@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Quiz</h1>
+    <form id="quizForm">
+        <h2>Soru 1: Adınız nedir?</h2>
+        <input type="text" name="username" required>
+
+        <h2>Soru 2: Favori renginiz nedir?</h2>
+        <input type="radio" name="question1" value="red" required> Kırmızı<br>
+        <input type="radio" name="question1" value="blue"> Mavi<br>
+        <input type="radio" name="question1" value="green"> Yeşil<br>
+
+        <h2>Soru 3: Favori hayvanınız nedir?</h2>
+        <input type="radio" name="question2" value="dog" required> Köpek<br>
+        <input type="radio" name="question2" value="cat"> Kedi<br>
+        <input type="radio" name="question2" value="parrot"> Papağan<br>
+
+        <h2>Soru 4: Hobilerinizi veya ilgi alanlarınızı anlatınız:</h2>
+        <textarea name="question3" rows="4" cols="50" required></textarea>
+
+        <br>
+        <input type="submit" value="Cevapları Gönder">
+    </form>
+
+    <div id="result" style="display:none;">
+        <h2>Sonuç</h2>
+        <p id="usernameResult"></p>
+        <p id="scoreResult"></p>
+        <p id="bestScoreResult"></p>
+        <button onclick="restartQuiz()">Quiz'e Yeniden Başla</button>
+    </div>
+
+    <div id="bestScore" style="position: absolute; top: 10px; right: 10px;">
+        <p>En İyi Skor: <span id="bestScoreValue">0</span>%</p>
+    </div>
+
+    <footer>
+        Geliştirici: MERYEM BUSRA CELİK
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
